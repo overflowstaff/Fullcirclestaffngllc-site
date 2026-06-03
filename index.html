@@ -1,1 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Full Circle Staffing LLC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Full Circle Staffing" class="logo" />
+    </div>
+    <nav class="top-nav">
+      <a href="#services">Services</a>
+      <a href="#why">Why Full Circle</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <main>
+    <section id="hero" class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay">
+        <h1>Professional AV & Event Labor for South Florida Venues</h1>
+        <p>Reliable crews. Safe operations. On‑time execution.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#book">Book Labor</a>
+          <a class="btn secondary" href="#join">Join the Crew</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="service">AV Technicians</div>
+        <div class="service">Stagehands</div>
+        <div class="service">Riggers</div>
+        <div class="service">Lift Operators</div>
+        <div class="service">Spotlight Ops</div>
+        <div class="service">Production Assistants</div>
+        <div class="service">Crew Chiefs</div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <h2>Why Full Circle</h2>
+      <ul>
+        <li>Safety first operations</li>
+        <li>Stadium and arena specialists</li>
+        <li>Fast dispatch and on‑site supervision</li>
+        <li>Fully insured and vetted crews</li>
+      </ul>
+    </section>
+
+    <section id="book" class="section form-section">
+      <h2>Book Labor</h2>
+      <form id="bookForm" action="/.netlify/functions/book" method="POST">
+        <input name="company" placeholder="Company name" required />
+        <input name="eventDate" type="date" required />
+        <input name="venue" placeholder="Venue" required />
+        <input name="contactName" placeholder="Contact name" required />
+        <input name="contactPhone" placeholder="Phone" required />
+        <textarea name="details" placeholder="Labor needed and call times"></textarea>
+        <button type="submit" class="btn primary">Submit Request</button>
+      </form>
+    </section>
+
+    <section id="join" class="section form-section">
+      <h2>Join the Crew</h2>
+      <form id="crewForm" action="/.netlify/functions/join" method="POST">
+        <input name="name" placeholder="Full name" required />
+        <input name="phone" placeholder="Phone" required />
+        <input name="skills" placeholder="Skills and certifications" />
+        <input name="availability" placeholder="Availability" />
+        <button type="submit" class="btn primary">Apply</button>
+      </form>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Full Circle Staffing</h2>
+      <p>Built by industry operators with stadium and rigging experience. Safety and reliability are our core.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: info@fullcirclestaffingllc.com</p>
+      <p>Dispatch: dispatch@fullcirclestaffingllc.com</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© Full Circle Staffing LLC</small>
+    <a class="portal-login" href="/portal.html">Portal Login</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
